@@ -2,6 +2,7 @@ language: ruby
 rvm:
 - 2.0.0
 
+sudo: false
 
 script:
 - bundle exec compass compile
@@ -10,7 +11,7 @@ script:
 after_success:
 - "./_scripts/travis_deploy.sh"
 
-#white list 
+#white list
 branches:
 only:
   - master
